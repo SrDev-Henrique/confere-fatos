@@ -1,26 +1,206 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
+/*
+ * Identidade visual do Confere Fatos.
+ * Cores medidas nas referências: papel creme, tinta preta, lavanda, ameixa
+ * e o rosa do marcador de texto. A família tipográfica é a Archivo, usada
+ * em larguras diferentes (eixo wdth) para criar a hierarquia.
+ */
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-papel: #f1ede2;
+  --color-tinta: #111111;
+  --color-branco: #ffffff;
+  --color-nevoa: #f4f2f7;
+  --color-lavanda: #9d9aad;
+  --color-ameixa: #67637d;
+  --color-rosa: #d7a8bb;
+  /* Rosa do marcador sobre fundo branco, medido nas referências. */
+  --color-rosa-suave: #d9bac6;
+  --color-rosa-claro: #e9c3d3;
+  --color-grafite: #4d4a57;
+
+  --font-sans: var(--font-archivo);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Rótulo: caixa alta, negrito e espaçado. Ex.: "CÓDIGO PENAL · ART. 359-M". */
+@utility tipo-rotulo {
+  font-stretch: 100%;
+  font-weight: 800;
+  font-size: 0.8125rem;
+  line-height: 1.25;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+/* Cartaz: caixa alta, muito condensado e pesado. Ex.: "TENTOU DAR UM GOLPE?". */
+@utility tipo-cartaz {
+  font-stretch: 62%;
+  font-weight: 900;
+  line-height: 0.9;
+  letter-spacing: -0.005em;
+  text-transform: uppercase;
+}
+
+/* Nome no bloco preto de pessoa. Ex.: "BAPTISTA JÚNIOR". */
+@utility tipo-nome {
+  font-stretch: 78%;
+  font-weight: 900;
+  line-height: 0.95;
+  letter-spacing: -0.005em;
+  text-transform: uppercase;
+}
+
+/* Manchete: condensada e forte, em caixa normal. Ex.: a pergunta da pesquisa. */
+@utility tipo-manchete {
+  font-stretch: 78%;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.01em;
+}
+
+/* Título: semicondensado, para citações e chamadas. */
+@utility tipo-titulo {
+  font-stretch: 88%;
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -0.005em;
+}
+
+/*
+ * Legenda preta, como as legendas dos vídeos de referência.
+ * O parágrafo que a contém precisa de entrelinha folgada (leading-[1.9]).
+ */
+@utility legenda {
+  display: inline;
+  background: var(--color-tinta);
+  color: var(--color-papel);
+  font-stretch: 88%;
+  font-weight: 700;
+  padding: 0.32em 0.5em;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+/*
+ * Marcador rosa. No Markdown: ==texto destacado==.
+ * A margem negativa anula o padding no fluxo do texto, para não criar
+ * espaço falso antes de pontuação.
+ */
+mark {
+  background: var(--color-rosa);
+  color: inherit;
+  padding: 0 0.12em;
+  margin: 0 -0.12em;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+.bg-branco mark,
+.texto-artigo blockquote mark {
+  background: var(--color-rosa-suave);
+}
+
+html {
+  background: var(--color-papel);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-papel);
+  color: var(--color-tinta);
+  font-feature-settings: "kern", "liga";
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-ameixa);
+  outline-offset: 3px;
+}
+
+::selection {
+  background: var(--color-rosa);
+  color: var(--color-tinta);
+}
+
+/* Texto dos artigos (Markdown). */
+.texto-artigo {
+  --tw-prose-body: var(--color-tinta);
+  --tw-prose-headings: var(--color-tinta);
+  --tw-prose-lead: var(--color-grafite);
+  --tw-prose-bold: var(--color-tinta);
+  --tw-prose-links: var(--color-tinta);
+  --tw-prose-counters: var(--color-ameixa);
+  --tw-prose-bullets: var(--color-ameixa);
+  --tw-prose-hr: var(--color-tinta);
+  --tw-prose-quotes: var(--color-tinta);
+  --tw-prose-quote-borders: var(--color-tinta);
+  --tw-prose-captions: var(--color-grafite);
+  --tw-prose-code: var(--color-tinta);
+  --tw-prose-kbd: var(--color-tinta);
+  --tw-prose-kbd-shadows: color-mix(in srgb, var(--color-tinta) 15%, transparent);
+  --tw-prose-pre-code: var(--color-papel);
+  --tw-prose-pre-bg: var(--color-tinta);
+  --tw-prose-th-borders: var(--color-tinta);
+  --tw-prose-td-borders: var(--color-lavanda);
+}
+
+.texto-artigo :where(h2) {
+  font-stretch: 78%;
+  font-weight: 800;
+  font-size: 1.875rem;
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+  margin-top: 2.25em;
+}
+
+.texto-artigo > :first-child {
+  margin-top: 0;
+}
+
+.texto-artigo > :last-child {
+  margin-bottom: 0;
+}
+
+.texto-artigo :where(h3) {
+  font-stretch: 88%;
+  font-weight: 700;
+}
+
+.texto-artigo :where(a) {
+  text-decoration-color: var(--color-rosa);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}
+
+.texto-artigo :where(a):hover {
+  text-decoration-color: var(--color-tinta);
+}
+
+/* Citação em bloco: cartão branco com barra preta embaixo. */
+.texto-artigo :where(blockquote) {
+  background: var(--color-branco);
+  border-left: 0;
+  border-bottom: 6px solid var(--color-tinta);
+  padding: 1.25rem 1.5rem;
+  font-stretch: 88%;
+  font-weight: 500;
+  font-style: normal;
+  font-size: clamp(1.375rem, 1rem + 1.5vw, 1.75rem);
+  line-height: 1.25;
+}
+
+.texto-artigo :where(blockquote) > :first-child {
+  margin-top: 0;
+}
+
+.texto-artigo :where(blockquote) > :last-child {
+  margin-bottom: 0;
+}
+
+.texto-artigo :where(blockquote strong) {
+  font-weight: 850;
+}
+
+.texto-artigo :where(blockquote p:first-of-type)::before,
+.texto-artigo :where(blockquote p:last-of-type)::after {
+  content: none;
 }
