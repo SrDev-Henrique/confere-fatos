@@ -1,13 +1,11 @@
 ---
+artigo: jeffrey-chiquini-julgamento-bolsonaro-stf
+ordem: 1
 titulo: "É enganoso dizer que o STF tirou o processo de Bolsonaro do plenário para uma Turma"
-resumo: "A regra que manda ações penais para as Turmas do STF foi aprovada em 2023, mais de um ano antes da denúncia contra Bolsonaro, e vale para todos os casos."
+resumo: "A regra que manda ações penais para as Turmas foi aprovada em 2023, antes da denúncia."
 data: 2026-11-07
 veredito: enganoso
 alegacao: "Ele começa no STF, não era pra começar, era pra começar em primeiro grau. Eles ==tiram o processo do plenário== e jogam pra uma turma."
-autorDaAlegacao: "Jeffrey Chiquini, advogado"
-origem:
-  plataforma: Instagram
-  url: https://www.instagram.com/p/Defa8HsywBv/
 tags: [Bolsonaro, STF, Trama golpista, Foro privilegiado]
 fontes:
   - titulo: "STF: Turmas do STF voltam a julgar ações penais (dezembro de 2023)"
@@ -18,7 +16,6 @@ fontes:
     url: https://valor.globo.com/politica/noticia/2025/09/10/entenda-por-que-bolsonaro-esta-sendo-julgado-na-primeira-turma-do-stf-e-nao-no-plenario.ghtml
   - titulo: "STF: Ministro Luiz Fux abre divergência em relação ao voto do relator na AP 2668"
     url: https://noticias.stf.jus.br/postsnoticias/ap-2668-terceiro-a-votar-ministro-luiz-fux-abre-divergencia-em-relacao-ao-voto-do-relator/
-rascunho: true
 ---
 
 ## O que diz a publicação

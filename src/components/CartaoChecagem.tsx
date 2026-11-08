@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { dividirAutor, type ResumoArtigo } from "@/lib/artigos";
+import type { ResumoArtigo } from "@/lib/modelo";
+import { dividirAutor } from "@/lib/autor";
 import { dataIso, formatarData } from "@/lib/datas";
 import { SeloVeredito } from "./SeloVeredito";
 import { TextoComDestaques } from "./TextoComDestaques";

@@ -1,0 +1,33 @@
+{
+  "projectId": "5dd49dd8-90bc-45f8-a24b-7c8bb52063c6",
+  "shape": "package",
+  "pkg": "confere-fatos-design-system",
+  "globalName": "ConfereFatos",
+  "buildCmd": "npm run build:design-system",
+  "entry": "./dist-ds/index.js",
+  "srcDir": "../src",
+  "cssEntry": "estilos.css",
+  "extraFonts": [
+    "../src/design-system/fontes.css"
+  ],
+  "docsMap": {
+    "SeloVeredito": "../.design-sync/grupos/vereditos.md",
+    "CartaoChecagem": "../.design-sync/grupos/checagens.md",
+    "TextoComDestaques": "../.design-sync/grupos/texto.md"
+  },
+  "dtsPropsFor": {
+    "CartaoChecagem": "/** Dados de uma checagem. Datas são objetos Date. */\n  artigo: {\n    /** Endereço da checagem: o cartão leva a /checagens/<slug>. */\n    slug: string;\n    titulo: string;\n    resumo: string;\n    data: Date;\n    atualizado?: Date;\n    veredito: \"verdadeiro\" | \"impreciso\" | \"enganoso\" | \"sem-evidencias\" | \"falso\";\n    /** A frase checada. Aceita ==trecho== para o marcador rosa. */\n    alegacao: string;\n    /** \"Nome, qualificação\", por exemplo \"Jeffrey Chiquini, advogado\". */\n    autorDaAlegacao: string;\n    origem: { plataforma: string; url: string; data?: Date };\n    tags: string[];\n    fontes: { titulo: string; url: string }[];\n    /** true mostra a etiqueta \"Rascunho\" no cartão. */\n    rascunho: boolean;\n  };"
+  },
+  "overrides": {
+    "CartaoChecagem": {
+      "cardMode": "column"
+    },
+    "TextoComDestaques": {
+      "cardMode": "column"
+    },
+    "SeloVeredito": {
+      "cardMode": "column"
+    }
+  },
+  "readmeHeader": ".design-sync/conventions.md"
+}

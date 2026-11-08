@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Conteiner } from "@/components/Conteiner";
 import { SeloVeredito } from "@/components/SeloVeredito";
 import { DEFINICOES_VEREDITO, VEREDITOS } from "@/lib/vereditos";
 
@@ -26,7 +27,7 @@ const etapas = [
   {
     titulo: "Classificação",
     texto:
-      "A afirmação recebe um dos selos abaixo. Todas as fontes usadas ficam listadas no fim do artigo para que qualquer pessoa possa conferir.",
+      "A afirmação recebe um dos selos abaixo. As fontes usadas ficam listadas junto de cada afirmação, para que qualquer pessoa possa conferir.",
   },
   {
     titulo: "Correção",
@@ -37,11 +38,11 @@ const etapas = [
 
 export default function Metodologia() {
   return (
-    <div className="flex flex-col gap-20">
+    <Conteiner className="flex flex-col gap-20 pb-24 pt-12 sm:pt-16">
       <header className="flex max-w-3xl flex-col gap-5">
         <h1 className="tipo-cartaz text-[clamp(3.5rem,12vw,8rem)]">Como checamos</h1>
         <p className="text-xl leading-relaxed text-grafite">
-          Cada checagem passa pelas mesmas cinco etapas e termina com um selo.
+          Cada afirmação passa pelas mesmas cinco etapas e termina com um selo.
           As fontes ficam sempre visíveis para quem quiser conferir.
         </p>
       </header>
@@ -50,7 +51,7 @@ export default function Metodologia() {
         <h2 id="titulo-etapas" className="tipo-rotulo border-b-4 border-rosa pb-2 text-sm sm:text-base">
           As etapas
         </h2>
-        <ol className="mt-8 grid gap-x-10 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
+        <ol role="list" className="mt-8 grid gap-x-10 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
           {etapas.map((etapa, i) => (
             <li key={etapa.titulo} className="flex gap-4">
               <span aria-hidden="true" className="tipo-cartaz w-12 shrink-0 text-8xl leading-[0.8]">
@@ -80,6 +81,6 @@ export default function Metodologia() {
           ))}
         </dl>
       </section>
-    </div>
+    </Conteiner>
   );
 }

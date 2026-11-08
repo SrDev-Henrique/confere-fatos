@@ -1,15 +1,18 @@
 import Link from "next/link";
 import { Suspense } from "react";
 import { site } from "@/lib/site";
+import { CLASSE_CONTEINER } from "./Conteiner";
 import { MenuEstatico, MenuPrincipal } from "./MenuPrincipal";
 
 export function Cabecalho() {
   return (
-    <header className="border-b-[3px] border-tinta">
-      <div className="mx-auto flex w-full max-w-6xl flex-wrap items-center justify-between gap-x-6 gap-y-3 px-4 py-4 sm:px-6">
+    <header className="border-b-2 border-tinta">
+      <div
+        className={`${CLASSE_CONTEINER} flex flex-wrap items-center justify-between gap-x-10 gap-y-3 py-5`}
+      >
         <Link
           href="/"
-          className="tipo-cartaz bg-tinta px-2.5 pb-1 pt-1.5 text-2xl text-papel sm:text-3xl"
+          className="tipo-cartaz bg-tinta px-3 pb-1 pt-1.5 text-[1.625rem] text-papel sm:text-[2.125rem]"
         >
           {site.nome}
         </Link>

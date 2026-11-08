@@ -1,13 +1,11 @@
 ---
+artigo: jeffrey-chiquini-julgamento-bolsonaro-stf
+ordem: 2
 titulo: "É falso que Lula foi condenado em três processos de corrupção"
-resumo: "Lula foi condenado em dois processos da Lava Jato, o do triplex e o do sítio de Atibaia, e as duas condenações foram anuladas pelo STF em 2021."
+resumo: "Lula foi condenado em dois processos da Lava Jato, e as duas condenações foram anuladas pelo STF em 2021."
 data: 2026-11-07
 veredito: falso
 alegacao: "O Lula foi condenado em ==três processos== de corrupção."
-autorDaAlegacao: "Jeffrey Chiquini, advogado"
-origem:
-  plataforma: Instagram
-  url: https://www.instagram.com/p/Defa8HsywBv/
 tags: [Lula, Lava Jato, STF]
 fontes:
   - titulo: "STF: Fachin anula condenações de Lula e manda ações penais para a Justiça Federal do DF"
@@ -18,7 +16,6 @@ fontes:
     url: https://www.gazetadopovo.com.br/eleicoes/2022/lula-inocentado-justica-condenacoes-lava-jato/
   - titulo: "Poder360: Lula se livra de processos, mas teve só 3 absolvições"
     url: https://www.poder360.com.br/justica/lula-se-livra-de-processos-mas-teve-so-3-absolvicoes/
-rascunho: true
 ---
 
 ## O que diz a publicação

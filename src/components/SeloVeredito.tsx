@@ -17,11 +17,24 @@ const DIMENSOES: Record<Tamanho, string> = {
 };
 
 type Props = {
+  /** Um de: verdadeiro, impreciso, enganoso, sem-evidencias, falso. */
   veredito: Veredito;
+  /** Padrão: "rotulo". */
   tamanho?: Tamanho;
+  /** Id opcional, para compor nomes acessíveis (aria-labelledby). */
+  id?: string;
 };
 
-export function SeloVeredito({ veredito, tamanho = "rotulo" }: Props) {
+/**
+ * Selo de veredito de uma checagem. O nome do veredito sempre aparece escrito.
+ * Tamanhos: "rotulo" (etiqueta pequena), "medio" (caixa da capa), "bloco"
+ * (largura total, no pé do cartão) e "cartaz" (bloco grande da página).
+ */
+export function SeloVeredito({ veredito, tamanho = "rotulo", id }: Props) {
   const { rotulo, classes } = DEFINICOES_VEREDITO[veredito];
-  return <span className={`${DIMENSOES[tamanho]} ${classes}`}>{rotulo}</span>;
+  return (
+    <span id={id} className={`${DIMENSOES[tamanho]} ${classes}`}>
+      {rotulo}
+    </span>
+  );
 }

@@ -40,3 +40,17 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# design-sync (Claude Design): scripts, build e estado local
+.ds-sync/
+ds-bundle/
+dist-ds/
+.design-sync/.cache/
+.design-sync/learnings/
+.design-sync/node_modules
+
+# Apurações: vídeos, áudios, quadros e prints ficam fora do git
+apuracoes/*/midia/
+# Cópias das fontes (reportagens de terceiros, PDFs) ficam só na máquina local;
+# os links e as datas de acesso estão em cadeia.md
+apuracoes/*/fontes/

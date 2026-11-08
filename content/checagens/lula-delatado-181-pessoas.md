@@ -1,13 +1,11 @@
 ---
+artigo: jeffrey-chiquini-julgamento-bolsonaro-stf
+ordem: 3
 titulo: "Não há evidência de que Lula foi delatado por 181 pessoas"
-resumo: "O número não aparece em nenhum registro público. Cerca de 155 delatores haviam fechado acordo em toda a Lava Jato até 2017, e eles citaram dezenas de políticos diferentes."
+resumo: "O número não aparece em nenhum registro público."
 data: 2026-11-07
 veredito: sem-evidencias
 alegacao: "O Lula foi ==delatado por 181 pessoas==, o mais alto escalão das maiores empreiteiras do Brasil."
-autorDaAlegacao: "Jeffrey Chiquini, advogado"
-origem:
-  plataforma: Instagram
-  url: https://www.instagram.com/p/Defa8HsywBv/
 tags: [Lula, Lava Jato, Delação premiada]
 fontes:
   - titulo: "BBC News Brasil: Quatro razões para explicar por que apenas 2 de 155 delatores da Lava Jato são políticos"
@@ -16,7 +14,6 @@ fontes:
     url: https://oglobo.globo.com/politica/delacao-de-oito-executivos-da-oas-chega-ao-stf-atinge-lula-dilma-aliados-de-temer-21830673
   - titulo: "Poder360: entrevista com Jeffrey Chiquini (YouTube)"
     url: https://www.youtube.com/watch?v=2Pr7DQzNVf8
-rascunho: true
 ---
 
 ## O que diz a publicação

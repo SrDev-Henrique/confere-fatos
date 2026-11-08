@@ -1,0 +1,21 @@
+/*
+ * Folha de estilos do pacote de identidade visual do Confere Fatos.
+ * Reaproveita os tokens e utilitários do site (src/app/globals.css) e garante
+ * que o vocabulário de cores e estilos de texto exista no CSS compilado,
+ * mesmo quando nenhum componente o usa, para quem monta telas novas.
+ */
+@import "../app/globals.css";
+
+@source "../components";
+
+/* Cores da paleta como fundo, texto, borda, contorno e sublinhado. */
+@source inline("{bg,text,border,ring,decoration,outline}-{papel,tinta,branco,nevoa,lavanda,ameixa,rosa,rosa-suave,rosa-claro,grafite,areia,papel-apagado}");
+/* Estilos de texto e a legenda preta. */
+@source inline("tipo-{rotulo,cartaz,nome,manchete,titulo} legenda");
+/* Texto longo dos artigos. */
+@source inline("texto-artigo prose prose-lg");
+
+/* No site, o next/font define esta variável; aqui ela aponta para a @font-face. */
+:root {
+  --font-archivo: "Archivo", ui-sans-serif, system-ui, sans-serif;
+}

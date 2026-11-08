@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { listarArtigos } from "@/lib/artigos";
+import { enderecoArtigo } from "@/lib/enderecos";
 import { site } from "@/lib/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -8,7 +9,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: site.url, lastModified: artigos[0]?.data },
     { url: `${site.url}/metodologia` },
     ...artigos.map((artigo) => ({
-      url: `${site.url}/checagens/${artigo.slug}`,
+      url: `${site.url}${enderecoArtigo(artigo.slug)}`,
       lastModified: artigo.atualizado ?? artigo.data,
     })),
   ];

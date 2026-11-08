@@ -1,13 +1,11 @@
 ---
+artigo: jeffrey-chiquini-julgamento-bolsonaro-stf
+ordem: 4
 titulo: "É enganoso dizer que o julgamento no STF serviu para tirar Bolsonaro da urna"
-resumo: "Bolsonaro já estava inelegível desde junho de 2023, por decisão do TSE, mais de dois anos antes de ser condenado no caso da trama golpista."
+resumo: "Bolsonaro já estava inelegível por decisão do TSE de 2023, em outro processo."
 data: 2026-11-07
 veredito: enganoso
 alegacao: "Eles queriam que esse processo fosse rápido para ==tirar o presidente Bolsonaro da urna== agora."
-autorDaAlegacao: "Jeffrey Chiquini, advogado"
-origem:
-  plataforma: Instagram
-  url: https://www.instagram.com/p/Defa8HsywBv/
 tags: [Bolsonaro, TSE, Eleições 2026, Inelegibilidade]
 fontes:
   - titulo: "TSE: Por maioria de votos, TSE declara Bolsonaro inelegível por 8 anos"
@@ -16,7 +14,6 @@ fontes:
     url: https://www.bbc.com/portuguese/articles/cjk861pk0eno
   - titulo: "STF: Confira como foram calculadas as penas no julgamento sobre tentativa de golpe"
     url: https://noticias.stf.jus.br/postsnoticias/confira-como-foram-calculadas-as-penas-no-julgamento-sobre-tentativa-de-golpe/
-rascunho: true
 ---
 
 ## O que diz a publicação

@@ -1,0 +1,14 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "noEmit": false,
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "outDir": "dist-ds/types",
+    "rootDir": "src",
+    "incremental": false,
+    "plugins": []
+  },
+  "include": ["src/design-system/index.ts"],
+  "exclude": []
+}

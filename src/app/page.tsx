@@ -1,63 +1,62 @@
-import Link from "next/link";
-import { CartaoChecagem } from "@/components/CartaoChecagem";
-import { SeloVeredito } from "@/components/SeloVeredito";
-import { listarArtigos } from "@/lib/artigos";
-import { site } from "@/lib/site";
-import { VEREDITOS } from "@/lib/vereditos";
+import { ArtigoDestaque } from "@/components/ArtigoDestaque";
+import { Conteiner } from "@/components/Conteiner";
+import { FaixaArtigo } from "@/components/FaixaArtigo";
+import { LegendaSelos } from "@/components/LegendaSelos";
+import { listarArtigos, separarDestaque } from "@/lib/artigos";
+import { textoQuantidade } from "@/lib/placar";
 
 export default function Home() {
   const artigos = listarArtigos();
+  const { destaque, recentes } = separarDestaque(artigos);
+  const totalChecagens = artigos.reduce((soma, a) => soma + a.checagens.length, 0);
 
   return (
-    <div className="flex flex-col gap-20">
-      <section className="flex flex-col gap-7">
-        <h1 className="tipo-cartaz text-[clamp(4.5rem,17vw,11rem)]">
-          Isso é
-          <br />
-          verdade?
-        </h1>
-        <ul className="flex flex-wrap gap-2.5" aria-label="Selos usados nas checagens">
-          {VEREDITOS.map((veredito) => (
-            <li key={veredito}>
-              <SeloVeredito veredito={veredito} tamanho="medio" />
-            </li>
-          ))}
-        </ul>
-        <p className="text-xl leading-[1.9] sm:text-2xl">
-          <span className="legenda">A gente responde, sempre com fonte.</span>
-        </p>
-        <p className="max-w-2xl text-lg text-grafite">
-          {site.descricao}{" "}
-          <Link
-            href="/metodologia"
-            className="font-semibold text-tinta underline decoration-rosa decoration-2 underline-offset-4 hover:decoration-tinta"
-          >
-            Veja como checamos e o que cada selo significa.
-          </Link>
-        </p>
-      </section>
-
-      <section aria-labelledby="titulo-checagens">
-        <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1 border-b-4 border-rosa pb-2">
-          <h2 id="titulo-checagens" className="tipo-rotulo whitespace-nowrap text-sm sm:text-base">
-            Checagens recentes
-          </h2>
-          <p className="tipo-rotulo whitespace-nowrap text-ameixa">
-            {artigos.length} {artigos.length === 1 ? "checagem" : "checagens"}
+    <Conteiner>
+      <section className="grid items-end gap-12 pb-[72px] pt-12 sm:pt-16 xl:grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)] xl:gap-20">
+        <div className="flex flex-col gap-6">
+          <h1 className="tipo-cartaz text-[min(4.5rem,21vw)] leading-[.86] sm:text-[clamp(4.5rem,10.4vw,9.375rem)]">
+            Isso é{" "}
+            <br />
+            verdade?
+          </h1>
+          <p className="text-xl leading-[1.9]">
+            <span className="legenda">A gente responde, sempre com fonte.</span>
+          </p>
+          <p className="max-w-[540px] text-pretty text-lg text-grafite">
+            Analisamos vídeos e publicações que viralizam. Cada artigo reúne o contexto do
+            conteúdo e a checagem de cada afirmação feita nele.
           </p>
         </div>
-        {artigos.length === 0 ? (
-          <p className="mt-8 text-lg text-grafite">
-            As primeiras checagens serão publicadas em breve.
-          </p>
-        ) : (
-          <div className="mt-8 grid gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
-            {artigos.map((artigo) => (
-              <CartaoChecagem key={artigo.slug} artigo={artigo} />
-            ))}
-          </div>
-        )}
+        <LegendaSelos />
       </section>
-    </div>
+
+      {destaque ? (
+        <section aria-labelledby="titulo-destaque" className="pb-20">
+          <h2 id="titulo-destaque" className="tipo-rotulo mb-7 border-b-4 border-rosa pb-2">
+            Em destaque
+          </h2>
+          <ArtigoDestaque artigo={destaque} />
+        </section>
+      ) : (
+        <p className="pb-24 text-lg text-grafite">Os primeiros artigos serão publicados em breve.</p>
+      )}
+
+      {recentes.length > 0 && (
+        <section aria-labelledby="titulo-recentes" className="flex flex-col gap-10 pb-24">
+          <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1 border-b-4 border-rosa pb-2">
+            <h2 id="titulo-recentes" className="tipo-rotulo">
+              Artigos recentes
+            </h2>
+            <p className="tipo-rotulo text-ameixa">
+              {textoQuantidade(artigos.length, "artigo", "artigos")} ·{" "}
+              {textoQuantidade(totalChecagens, "checagem", "checagens")}
+            </p>
+          </div>
+          {recentes.map((artigo) => (
+            <FaixaArtigo key={artigo.slug} artigo={artigo} />
+          ))}
+        </section>
+      )}
+    </Conteiner>
   );
 }

@@ -19,6 +19,10 @@
   --color-rosa-suave: #d9bac6;
   --color-rosa-claro: #e9c3d3;
   --color-grafite: #4d4a57;
+  /* Fundo da área de cartões nas faixas de artigos. */
+  --color-areia: #e9e4d7;
+  /* Texto corrido sobre fundo preto. */
+  --color-papel-apagado: #d9d4c7;
 
   --font-sans: var(--font-archivo);
 }
@@ -111,9 +115,21 @@ body {
   font-feature-settings: "kern", "liga";
 }
 
-:focus-visible {
-  outline: 3px solid var(--color-ameixa);
-  outline-offset: 3px;
+/* Na camada base, para que utilitários como focus-visible:outline-rosa possam sobrescrever. */
+@layer base {
+  :focus-visible {
+    outline: 3px solid var(--color-ameixa);
+    outline-offset: 3px;
+  }
+}
+
+/* Página com a barra de seções fixa: o foco e o fim da página ficam acima dela. */
+html:has([data-slot="scroll-progress"]) {
+  scroll-padding-bottom: 5rem;
+}
+
+body:has([data-slot="scroll-progress"]) > footer {
+  padding-bottom: 5rem;
 }
 
 ::selection {
@@ -163,6 +179,16 @@ body {
 .texto-artigo :where(h3) {
   font-stretch: 88%;
   font-weight: 700;
+}
+
+/* Títulos do texto das checagens, rebaixados para <h4> na página do artigo. */
+.texto-artigo :where(h4) {
+  font-stretch: 78%;
+  font-weight: 800;
+  font-size: 1.5rem;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  margin-top: 2em;
 }
 
 .texto-artigo :where(a) {
