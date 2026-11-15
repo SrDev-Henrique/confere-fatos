@@ -13,7 +13,7 @@ resumo: "Uma frase que explica a conclusão."
 data: 2026-01-31
 # atualizado: 2026-02-15   # Descomente quando corrigir ou atualizar o texto.
 
-# Um destes: verdadeiro | impreciso | enganoso | sem-evidencias | falso
+# Um destes: verdadeiro | impreciso | exagerado | enganoso | sem-evidencias | falso
 veredito: falso
 
 # Use ==assim== para destacar um trecho com o marcador rosa.

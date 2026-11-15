@@ -6,6 +6,7 @@ const CORES: Record<Veredito, string> = {
   falso: "bg-tinta",
   "sem-evidencias": "bg-lavanda",
   enganoso: "bg-ameixa",
+  exagerado: "bg-rosa border-2 border-ameixa",
   impreciso: "bg-rosa",
   verdadeiro: "bg-branco border-2 border-tinta",
 };

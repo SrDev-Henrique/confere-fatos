@@ -2,7 +2,7 @@ import { DEFINICOES_VEREDITO, VEREDITOS } from "@/lib/vereditos";
 import { SeloVeredito } from "./SeloVeredito";
 
 /**
- * "O que cada selo significa": os cinco selos com a descrição curta. A coluna de
+ * "O que cada selo significa": os seis selos com a descrição curta. A coluna de
  * 290px garante que "Sem evidências" caiba numa linha; não reduza.
  */
 export function LegendaSelos() {

@@ -2,7 +2,7 @@
 
 Vídeo: https://www.instagram.com/p/De3HQ66O3J9/ (Atila Iamarino, 2026-10-23). Numeração igual à de `afirmacoes.md`. Todas as fontes foram acessadas em **2026-11-07** e estão salvas em `fontes/` (cópia em Markdown pelo Jina Reader, ou PDF). **P** = fonte primária; **S** = secundária. Todos os trechos citados foram conferidos contra a retranscrição com o modelo `medium` (seção "Conferência dos trechos citados" de `transcricao.md`); nenhum divergiu.
 
-Escala de vereditos do método (8 níveis). Para o site, Exagerado e Contraditório não têm selo: ver "Pendências" no fim.
+Escala de vereditos do método (8 níveis). Para o site, Contraditório não tem selo, e Exagerado não tinha até 2026-11-15: ver "Pendências" no fim.
 
 ## Afirmações numéricas
 
@@ -91,5 +91,5 @@ Escala de vereditos do método (8 níveis). Para o site, Exagerado e Contraditó
 
 ## Pendências para o site
 
-- Afirmação 18 (IA e servidores) recebeu **Exagerado** no método; o editor decidiu em 2026-11-07 publicar com o selo **impreciso** (checagem 16 do artigo).
+- Afirmação 18 (IA e servidores) recebeu **Exagerado** no método; o editor decidiu em 2026-11-07 publicar com o selo **impreciso** (checagem 16 do artigo). Em 2026-11-15 o site ganhou o selo Exagerado, e o editor decidiu migrar a checagem para ele, com nota de atualização na checagem e data de atualização no artigo.
 - Afirmações 21-22 (lancha, garotas, Rolex): relato de fonte única (piauí), sem resposta de Flávio. Editor confirmou: no artigo, descritas como "o que diz a reportagem", sem selo.

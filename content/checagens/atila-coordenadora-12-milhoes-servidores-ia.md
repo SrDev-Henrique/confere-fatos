@@ -1,10 +1,11 @@
 ---
 artigo: atila-iamarino-nao-foi-negacionismo-foi-negocio
 ordem: 16
-titulo: "É impreciso dizer que a coordenadora econômica de Flávio defende substituir 12,5 milhões de servidores por inteligência artificial"
+titulo: "É exagerado dizer que a coordenadora econômica de Flávio defende substituir 12,5 milhões de servidores por inteligência artificial"
 resumo: "Daniella Marques citou 12,5 milhões como o total de servidores e propôs substituir por IA parte das carreiras administrativas, conforme se aposentam."
 data: 2026-11-07
-veredito: impreciso
+atualizado: 2026-11-15
+veredito: exagerado
 alegacao: "Lembra que a coordenadora econômica dele ==defende substituir 12 milhões e meio de funcionários públicos por inteligência artificial==."
 tags: [Flávio Bolsonaro, Daniella Marques, Servidores públicos, Inteligência artificial, Eleições 2026]
 fontes:
@@ -28,4 +29,6 @@ A direção da afirmação do vídeo está certa: a coordenadora defendeu trocar
 
 ## Conclusão
 
-A afirmação é **imprecisa**. A economista defendeu substituir por inteligência artificial parte dos servidores de carreiras administrativas, conforme se aposentam. Os 12,5 milhões aparecem na fala dela como o total de servidores do país, não como a quantidade a ser substituída.
+A afirmação é **exagerada**. A economista defendeu substituir por inteligência artificial parte dos servidores de carreiras administrativas, conforme se aposentam. Os 12,5 milhões aparecem na fala dela como o total de servidores do país, não como a quantidade a ser substituída.
+
+**Atualização em 15 de novembro de 2026:** esta checagem foi publicada com o selo impreciso. O site passou a ter o selo exagerado, para afirmações que vão na direção certa mas aumentam o tamanho do fato, e ele descreve melhor este caso. A apuração e as fontes não mudaram.

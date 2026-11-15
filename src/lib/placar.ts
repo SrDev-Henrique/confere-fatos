@@ -1,7 +1,14 @@
 import { DEFINICOES_VEREDITO, type Veredito } from "./vereditos";
 
 /** Ordem dos segmentos na barra de placar: do mais grave ao verdadeiro. */
-const ORDEM_PLACAR: Veredito[] = ["falso", "sem-evidencias", "enganoso", "impreciso", "verdadeiro"];
+const ORDEM_PLACAR: Veredito[] = [
+  "falso",
+  "sem-evidencias",
+  "enganoso",
+  "exagerado",
+  "impreciso",
+  "verdadeiro",
+];
 
 /** Espaço não separável: o número nunca se separa da palavra na quebra de linha. */
 const NBSP = " ";

@@ -23,7 +23,7 @@ CSS variables also exist: `var(--color-papel)`, `var(--color-tinta)`, `var(--col
 
 ## Components
 
-- `SeloVeredito`: verdict badge. `veredito`: `verdadeiro` | `impreciso` | `enganoso` | `sem-evidencias` | `falso`. `tamanho`: `rotulo` (small label), `medio` (inline box), `bloco` (full-width bar under a card), `cartaz` (big verdict on a check page). Falso is the black block, enganoso plum, sem evidências lavender, impreciso pink, verdadeiro an outlined box. Never recolor verdicts.
+- `SeloVeredito`: verdict badge. `veredito`: `verdadeiro` | `impreciso` | `exagerado` | `enganoso` | `sem-evidencias` | `falso`. `tamanho`: `rotulo` (small label), `medio` (inline box), `bloco` (full-width bar under a card), `cartaz` (big verdict on a check page). Falso is the black block, enganoso plum, sem evidências lavender, exagerado pink with a plum frame, impreciso pink, verdadeiro an outlined box. Never recolor verdicts.
 - `CartaoChecagem`: listing card for one check. Takes one `artigo` object; `data` fields are `Date` objects; `alegacao` accepts `==trecho==`.
 - `TextoComDestaques`: renders text, turning `==trecho==` into the pink marker.
 

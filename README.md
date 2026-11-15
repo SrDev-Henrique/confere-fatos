@@ -71,7 +71,7 @@ O texto em Markdown abaixo do cabeçalho é opcional e aparece antes das afirma�
 | `resumo` | sim | Uma frase curta com a conclusão, mostrada nos cartões |
 | `data` | sim | Data da checagem, no formato `AAAA-MM-DD` |
 | `atualizado` | não | Data da última correção |
-| `veredito` | sim | `verdadeiro`, `impreciso`, `enganoso`, `sem-evidencias` ou `falso` |
+| `veredito` | sim | `verdadeiro`, `impreciso`, `exagerado`, `enganoso`, `sem-evidencias` ou `falso` |
 | `alegacao` | sim | A frase checada |
 | `tags` | não | Lista de assuntos |
 | `fontes` | sim | Lista com `titulo` e `url`, pelo menos uma |

@@ -17,7 +17,7 @@ const DIMENSOES: Record<Tamanho, string> = {
 };
 
 type Props = {
-  /** Um de: verdadeiro, impreciso, enganoso, sem-evidencias, falso. */
+  /** Um de: verdadeiro, impreciso, exagerado, enganoso, sem-evidencias, falso. */
   veredito: Veredito;
   /** Padrão: "rotulo". */
   tamanho?: Tamanho;

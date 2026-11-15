@@ -2,6 +2,7 @@
 titulo: "O que é verdade no vídeo de Atila Iamarino sobre vacinas, negócios e a família Bolsonaro na pandemia"
 contexto: "Em vídeo de nove minutos no Instagram, o biólogo liga a reportagem da piauí sobre Flávio Bolsonaro ao que a CPI da Covid apurou e faz dezenas de afirmações sobre a compra de vacinas. Checamos as 16 principais."
 data: 2026-11-07
+atualizado: 2026-11-15
 tipo: Vídeo
 origem:
   plataforma: Instagram

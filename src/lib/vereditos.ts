@@ -1,6 +1,7 @@
 export const VEREDITOS = [
   "verdadeiro",
   "impreciso",
+  "exagerado",
   "enganoso",
   "sem-evidencias",
   "falso",
@@ -37,6 +38,15 @@ export const DEFINICOES_VEREDITO: Record<Veredito, DefinicaoVeredito> = {
     descricaoCurta: "Tem base real, mas omite ou erra detalhes.",
     nota: 4,
     classes: "bg-rosa text-tinta",
+  },
+  exagerado: {
+    rotulo: "Exagerado",
+    descricao:
+      "A informação parte de um fato real e vai na direção certa, mas aumenta o tamanho ou o alcance do que as fontes mostram.",
+    descricaoCurta: "Tem base real, mas aumenta o tamanho do fato.",
+    nota: 3,
+    // Rosa do impreciso com a moldura ameixa do enganoso: fica entre os dois na escala.
+    classes: "bg-rosa text-tinta ring-[3px] ring-inset ring-ameixa",
   },
   enganoso: {
     rotulo: "Enganoso",

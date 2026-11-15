@@ -1,6 +1,6 @@
 import { SeloVeredito } from "confere-fatos-design-system";
 
-const TODOS = ["verdadeiro", "impreciso", "enganoso", "sem-evidencias", "falso"] as const;
+const TODOS = ["verdadeiro", "impreciso", "exagerado", "enganoso", "sem-evidencias", "falso"] as const;
 
 /** Etiquetas pequenas, para listas e legendas. */
 export const Etiquetas = () => (
