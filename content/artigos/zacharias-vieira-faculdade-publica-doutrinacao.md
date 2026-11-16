@@ -14,7 +14,6 @@ imagem:
 pessoa: Zacharias Vieira
 qualificacao: advogado e influenciador
 tags: [Universidade pública, Educação, Doutrinação, Ideologia]
-rascunho: true
 ---
 
 O vídeo foi gravado dentro de um carro e publicado em 10 de novembro de 2026 no perfil de Zacharias Vieira, advogado que tem cerca de 430 mil seguidores no Instagram. Quatro dias depois, [Luiz Bacci republicou o vídeo](https://www.instagram.com/p/DfuaX7NEXAb/) para seus 24,7 milhões de seguidores, com a manchete "Pai descarta faculdade pública para a filha por receio dos 'esquerdistas'". Comparamos as duas versões: a republicação traz a fala inteira, sem corte.

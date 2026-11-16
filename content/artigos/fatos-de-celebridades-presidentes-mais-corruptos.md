@@ -14,7 +14,6 @@ imagem:
 pessoa: Fatos de Celebridades
 qualificacao: perfil de curiosidades no Instagram
 tags: [Lula, Dilma Rousseff, Fernando Collor, Michel Temer, Fernando Henrique Cardoso, Corrupção, Impeachment, STF]
-rascunho: true
 ---
 
 O vídeo foi publicado em 17 de outubro de 2026 pelo perfil Fatos de Celebridades, que tem cerca de 36 mil seguidores e se apresenta como página de "mistérios, segredos e histórias surpreendentes". Oito dias depois, Lula, apontado no vídeo como "o mais corrupto", foi [reeleito no segundo turno](https://www.tse.jus.br/comunicacao/noticias/2026/Outubro/presidente-do-tse-anuncia-reeleicao-de-lula-e-faz-balanco-do-2o-turno-das-eleicoes-2026). A legenda do post está em japonês e anuncia um desenho animado, sem relação com o conteúdo. Os quadros trazem a marca d'água de outro perfil, "@Gs.Futebol", cuja publicação original não localizamos.
