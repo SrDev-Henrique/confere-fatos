@@ -247,8 +247,13 @@ const ScrollProgress = ({
       onBlur={(e) => {
         onBlur?.(e);
         // Lista aberta e foco saindo do componente (Tab): fecha sem puxar o foco de volta.
+        // No Safari, tocar num botão não lhe dá foco: o foco vai para o ancestral
+        // focável mais próximo (o <main tabIndex={-1}>). Isso não é sair do componente,
+        // e fechar aqui desmontaria o item antes do clique. Toque fora da lista
+        // continua fechando, pelo pointerdown acima.
         const destino = e.relatedTarget as Node | null;
-        if (open && destino && !e.currentTarget.contains(destino)) setOpen(false);
+        const saiu = destino && !e.currentTarget.contains(destino) && !destino.contains(e.currentTarget);
+        if (open && saiu) setOpen(false);
       }}
     >
       {/* Medidas da barra e da lista, com a borda de 2px incluída. */}
